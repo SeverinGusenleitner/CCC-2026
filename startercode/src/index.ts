@@ -17,8 +17,7 @@ async function writeOutputFile(fileName:string,content:string){
     await writeFile(dataPath, content, "utf-8");
 }
 
-const fileInput = await readInputFile("input.txt");
-
-
-writeOutputFile("output.txt", " " + fileInput + " change");
+let fileInput = await readInputFile("input.txt");
+fileInput += " change";
+writeOutputFile("output.txt", fileInput);
 
