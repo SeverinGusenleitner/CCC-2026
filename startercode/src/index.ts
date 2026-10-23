@@ -1,7 +1,7 @@
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { readFile, writeFile } from "fs/promises";
-import { solveLevel2 } from "./level2";
+import { solveLevel3 } from "./level3";
 
 
 async function readInputFile(fileName: string) {
@@ -19,8 +19,8 @@ async function writeOutputFile(fileName: string, content: string) {
     await writeFile(dataPath, content, "utf-8");
 }
 
-const inputFile = "levels/level2/in_level-2_2-large.txt";
-const outputFile = "levels/level2/out_level-2_2-large.txt";
+const inputFile = "levels/level3/in_level-3_4-enormous.txt";
+const outputFile = "levels/level3/out_level-3_4-enormous.txt";
 const fileInput = await readInputFile(inputFile);
-const fileOutput = solveLevel2(fileInput);
+const fileOutput = solveLevel3(fileInput);
 await writeOutputFile(outputFile, fileOutput);
